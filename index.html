@@ -52,6 +52,7 @@
         <meta name="msapplication-wide310x150logo" content="icons/mstile-310x150.png" />
         <meta name="msapplication-square310x310logo" content="icons/mstile-310x310.png" />
         <link rel="profile" href="http://gmpg.org/xfn/11">
+        <meta property="fb:admins" content="1521169662"/>
 
         <title>PassDOGEnerator - Much password! Wow!</title>
 
@@ -92,13 +93,40 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript">
+        //start and stop included
+        function randomNum(start, stop){
+            return start + Math.floor(Math.random() * (stop - start + 1));
+        }
+
+        function newPassword() {
+            var password = '';
+            var prefix = ['much', 'such', 'many', 'very', 'so'];
+            var other = ['wow', 'amazing'];
+            var words = ['security', 'crypto', 'entropy', 'words', 'password', 'doge', 'easy', 'remember', 'generator']
+            var lenght = randomNum(2, 3); //2 or 4 prefixes long password - it means atleast 5 words
+
+            while(lenght > 0) {
+                password += prefix.splice(randomNum(0, prefix.length - 1), 1)[0] 
+                          + words.splice(randomNum(0, words.length - 1), 1)[0];
+                lenght--;
+            };
+            
+            chance = randomNum(0, 2);
+            if(chance <= 1) {
+                password = other.splice(randomNum(0, other.length - 1), 1)[0] + password;
+            }
+            if(chance >= 1) {
+                password += other.splice(randomNum(0, other.length - 1), 1)[0];
+            }
+
+            return password;
+        }
+
         $(document).ready(function() {
             $('#generator').click(function(){
-                $('#passdoge').html("yournewpasswordthere");
+                $('#passdoge').html(newPassword);
             });
         });
-
-        //TODO: implement grammar
         </script>
     </body>
 </html>
