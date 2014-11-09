@@ -92,7 +92,10 @@
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://davidbau.com/encode/seedrandom.min.js"></script>
         <script type="text/javascript">
+        Math.seedrandom(Date().getTime);
+
         //start and stop included
         function randomNum(start, stop){
             return start + Math.floor(Math.random() * (stop - start + 1));
@@ -123,6 +126,7 @@
         }
 
         $(document).ready(function() {
+            $('#passdoge').html(newPassword);
             $('#generator').click(function(){
                 $('#passdoge').html(newPassword);
             });
