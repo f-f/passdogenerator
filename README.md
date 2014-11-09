@@ -3,7 +3,7 @@ passdogenerator
 
 [http://passdogenerator.com](http://passdogenerator.com)
 
-![](http://dogr.io/sowords/veryentropy/muchpassword/manygenerator/wow.png)
+![](http://i.imgur.com/OBP4z7B.png)
 
 Having [trouble with passwords?](http://xkcd.com/936/)
 Let Doge generate 'em for you!
