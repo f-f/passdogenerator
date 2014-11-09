@@ -1,0 +1,74 @@
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: url("../fonts/ComicNeue-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/ComicNeue-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ComicNeue-Regular.woff") format("woff"), url("../fonts/ComicNeue-Regular.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: url("../fonts/ComicNeue-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/ComicNeue-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ComicNeue-Bold.woff") format("woff"), url("../fonts/ComicNeue-Bold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 700;
+}
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    -webkit-transition: opacity 400ms;
+    -moz-transition: opacity 400ms;
+    transition: opacity 400ms;
+    display: block;
+    position: static;
+    font-family: 'Comic Neue', sans-serif;
+    letter-spacing: -0.5px;
+}
+
+body {
+    background: url(../img/dogeround.jpg);
+}
+
+h1, h3 {
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+#container {
+    position: relative;
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.jumbotron {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  #container {
+    max-width: 730px;
+  }
+}
